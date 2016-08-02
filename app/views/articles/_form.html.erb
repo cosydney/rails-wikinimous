@@ -1,15 +1,23 @@
 
 <%= form_for @article do |a| %>
 
+<!-- <div id="ace">
+<div id="editor">
+
+</div>
+</div> -->
+
 <div>
 <%= a.label :title, "Title" %>
 <%=  a.text_field :title, class: 'form-control' %>
 </div>
 <div>
 <%= a.label :content, "Content" %>
-<%= a.text_area :content, class: "form-control", id: "content" %>
+<%= a.text_area :content, class: "form-control", id: "editor"  %>
 </div>
 <br>
 <%= a.submit class: "btn" %>
 
 <% end %>
+
+

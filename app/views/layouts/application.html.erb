@@ -20,5 +20,11 @@
 
   <%= yield %>
 
+
+<script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.getSession().setMode("ace/mode/javascript");
+</script>
 </body>
 </html>

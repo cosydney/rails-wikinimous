@@ -1,6 +1,13 @@
+
+</style>
+</head>
+<body>
+
   <div class="index">
         <% @articles.each do |article| %>
         <h1> <%= link_to article.title, article_path(article) %> </h1>
         <p> <%= article.content[0..150] %>... </p>
         <% end %>
   </div>
+
+
