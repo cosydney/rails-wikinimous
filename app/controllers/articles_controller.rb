@@ -9,21 +9,26 @@ class ArticlesController < ApplicationController
   def show
   end
 
+  def new
+    @article = Article.new
+  end
+
   def update
     @article.update(article_params)
+    redirect_to article_path(@article)
   end
 
   def create
-    article = article.create(article_params)
+    article = Article.create(article_params)
     redirect_to articles_path(article)
   end
 
   def edit
   end
 
-  def destory
+  def destroy
     @article.destroy
-    redirect_to article_index_path
+    redirect_to root_path
   end
 
   private

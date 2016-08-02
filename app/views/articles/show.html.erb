@@ -1,0 +1,10 @@
+<div class="index">
+  <h1> <%= @article.title %> </h1>
+  <%= link_to 'Delete', article_path(@article), method: :delete %>
+  <%= link_to 'Edit', edit_article_path(@article) %>
+<hr>
+
+  <p> <%= markdown(@article.content) %></p>
+<%= link_to 'See all', root_path %>
+</div>
+
